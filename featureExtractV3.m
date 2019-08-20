@@ -376,53 +376,7 @@ featRestParetic;
 featPareticAll = [featReachParetic;featRetractParetic;featTransportParetic;featRestParetic];
 featPareticLabelsAll = [ones(size(featReachParetic,1),1);2.*ones(size(featRetractParetic,1),1);3.*ones(size(featTransportParetic,1),1);4.*ones(size(featRestParetic,1),1)];
 
-%% segmentation using 7 sensors (no LT)
 
-featReachParetic7 = [featReachPareticPelvis featReachPareticT8 featReachPareticHead featReachPareticRTShoulder featReachPareticRTUpperarm featReachPareticRTForearm featReachPareticRTHand];
-featRetractParetic7 = [featRetractPareticPelvis featRetractPareticT8 featRetractPareticHead featRetractPareticRTShoulder featRetractPareticRTUpperarm featRetractPareticRTForearm featRetractPareticRTHand];
-featTransportParetic7 = [featTransportPareticPelvis featTransportPareticT8 featTransportPareticHead featTransportPareticRTShoulder featTransportPareticRTUpperarm featTransportPareticRTForearm featTransportPareticRTHand];
-featRestParetic7 = [featRestPareticPelvis featRestPareticT8 featRestPareticHead featRestPareticRTShoulder featRestPareticRTUpperarm featRestPareticRTForearm featRestPareticRTHand];
-
-featParetic7 = [featReachParetic7;featRetractParetic7;featTransportParetic7;featRestParetic7];
-featPareticLabels7 = [ones(size(featReachParetic,1),1);2.*ones(size(featRetractParetic,1),1);3.*ones(size(featTransportParetic,1),1);4.*ones(size(featRestParetic,1),1)];
-
-%% segmentation using sensors 5 sensors(RT and T8)
-
-featReachParetic5 = [featReachPareticT8 featReachPareticRTShoulder featReachPareticRTUpperarm featReachPareticRTForearm featReachPareticRTHand];
-featRetractParetic5 = [featRetractPareticT8 featRetractPareticRTShoulder featRetractPareticRTUpperarm featRetractPareticRTForearm featRetractPareticRTHand];
-featTransportParetic5 = [featTransportPareticT8 featTransportPareticRTShoulder featTransportPareticRTUpperarm featTransportPareticRTForearm featTransportPareticRTHand];
-featRestParetic5 = [featRestPareticT8 featRestPareticRTShoulder featRestPareticRTUpperarm featRestPareticRTForearm featRestPareticRTHand];
-
-featParetic5 = [featReachParetic5;featRetractParetic5;featTransportParetic5;featRestParetic5];
-featPareticLabels5 = [ones(size(featReachParetic,1),1);2.*ones(size(featRetractParetic,1),1);3.*ones(size(featTransportParetic,1),1);4.*ones(size(featRestParetic,1),1)];
-
-%% segmentation using sensors 3 sensors(RT hand, forearm and upperarm)
-
-featReachParetic3 = [featReachPareticRTUpperarm featReachPareticRTForearm featReachPareticRTHand];
-featRetractParetic3 = [featRetractPareticRTUpperarm featRetractPareticRTForearm featRetractPareticRTHand];
-featTransportParetic3 = [featTransportPareticRTUpperarm featTransportPareticRTForearm featTransportPareticRTHand];
-featRestParetic3 = [featRestPareticRTUpperarm featRestPareticRTForearm featRestPareticRTHand];
-
-featParetic3 = [featReachParetic3;featRetractParetic3;featTransportParetic3;featRestParetic3];
-featPareticLabels3 = [ones(size(featReachParetic,1),1);2.*ones(size(featRetractParetic,1),1);3.*ones(size(featTransportParetic,1),1);4.*ones(size(featRestParetic,1),1)];
-%% segmentation using sensors 2 sensors(RT forearm and upperarm)
-
-featReachParetic2 = [featReachPareticRTUpperarm featReachPareticRTForearm];
-featRetractParetic2 = [featRetractPareticRTUpperarm featRetractPareticRTForearm];
-featTransportParetic2 = [featTransportPareticRTUpperarm featTransportPareticRTForearm];
-featRestParetic2 = [featRestPareticRTUpperarm featRestPareticRTForearm];
-
-featParetic2 = [featReachParetic2;featRetractParetic2;featTransportParetic2;featRestParetic2];
-featPareticLabels2 = [ones(size(featReachParetic,1),1);2.*ones(size(featRetractParetic,1),1);3.*ones(size(featTransportParetic,1),1);4.*ones(size(featRestParetic,1),1)];
-%% segmentation using sensors 1 sensor(RT hand)
-
-featReachParetic1 = [featReachPareticRTHand];
-featRetractParetic1 = [featRetractPareticRTHand];
-featTransportParetic1 = [featTransportPareticRTHand];
-featRestParetic1 = [featRestPareticRTHand];
-
-featParetic1 = [featReachParetic1;featRetractParetic1;featTransportParetic1;featRestParetic1];
-featPareticLabels1 = [ones(size(featReachParetic,1),1);2.*ones(size(featRetractParetic,1),1);3.*ones(size(featTransportParetic,1),1);4.*ones(size(featRestParetic,1),1)];
 %% stacking the data
 featPareticPelvis = [featReachPareticPelvis; featRetractPareticPelvis; featTransportPareticPelvis; featRestPareticPelvis];
 featPareticT8 = [featReachPareticT8; featRetractPareticT8; featTransportPareticT8; featRestPareticT8];
